@@ -32,6 +32,11 @@ class ScansBloc with validators{
   }
 
 
+ obtenerScans2()async{
+
+    _scansController.sink.add(await DBProvider.db.getTodosScansService());
+  }
+
 borrarScan(int id) async{
 await DBProvider.db.deleteScan(id);
 obtenerScans();
@@ -46,9 +51,9 @@ borrarScanTodos() async {
 
 agregarScan(ScanModel scan) async{
 
-await DBProvider.db.nuevoScan(scan);
+await DBProvider.db.nuevoScanService(scan);
 
- obtenerScans();
+ obtenerScans2();
 
 }
 }

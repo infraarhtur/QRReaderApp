@@ -11,7 +11,7 @@ class DireccionesPage extends StatelessWidget {
    final scanBloc = new ScansBloc();
   @override
   Widget build(BuildContext context) {
-scanBloc.obtenerScans();
+scanBloc.obtenerScans2();
 
     return StreamBuilder <List<ScanModel>>(
       stream: scanBloc.scansStreamHttp,
@@ -20,6 +20,7 @@ scanBloc.obtenerScans();
           return Center(child: CircularProgressIndicator());
         }
         final scans = snapshot.data;
+        print(scans);
 
         if (scans.length == 0) {
           return Center(

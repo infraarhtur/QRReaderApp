@@ -8,7 +8,7 @@ class MapasPage extends StatelessWidget {
    final scanBloc = new ScansBloc();
   @override
   Widget build(BuildContext context) {
-scanBloc.obtenerScans();
+scanBloc.obtenerScans2();
 
     return StreamBuilder <List<ScanModel>>(
       stream: scanBloc.scansStream,

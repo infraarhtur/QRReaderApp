@@ -74,7 +74,7 @@ futureString = e.toString();
       final scan = ScanModel(valor: futureString);
       // final scan2 = ScanModel(valor:'geo:4.6831128,-74.0523874');
       scanBloc.agregarScan(scan);
-// scanBloc.agregarScan(scan2);
+      // scanBloc.agregarScan(scan2);
 
       if (Platform.isIOS) {
         Future.delayed(Duration(milliseconds: 750), () {
@@ -83,21 +83,9 @@ futureString = e.toString();
       } else {
         utils.abrirScan(context, scan);
       }
-
-// scanBloc.agregarScan(scan2);
     }
 
-// try {
-//   futureString =await BarcodeScanner.scan();
-// } catch (e) {
-//   futureString = e.toString();
-// }
 
-// print('Future String: $futureString');
-
-// if(futureString != null){
-//   print('Tenemos informaciòn');
-// }
   }
 
   Widget _callPage(int paginaActual) {

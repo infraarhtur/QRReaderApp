@@ -115,13 +115,18 @@ class DBProvider {
 nuevoScanService(ScanModel nuevoScan)async{
  String _url = '104.42.33.182:8181';
     final url = Uri.http(_url, '/api/guardarEmpleado',{
-      "id": nuevoScan.id.toString() ,
+  
       "tipo":nuevoScan.tipo,
       "valor": nuevoScan.valor
       
     });
     
-       final resp = await http.post(url);
+       final resp = await http.post(url , headers:{"Content-Type":"application/json"} )
+       .then((response) {
+    print("Response status: ${response.statusCode}");
+    print("Response body: ${response.body}");
+    return true;
+  });
 
 return resp;
 } 

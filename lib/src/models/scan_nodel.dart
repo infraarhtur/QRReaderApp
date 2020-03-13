@@ -22,14 +22,7 @@ class ScanModel {
 
     }
 
-// ScanModel.fromJsonList(List<dynamic> jsonList){
-//    if(jsonList == null) return;
-// for (var item in jsonList) {
-//       final pelicula = new ScanModel.fromJson(item);
-//       items.add(pelicula);
-//     }
 
-// }
 
     factory ScanModel.fromJson(Map<String, dynamic> json) => 
     ScanModel(
